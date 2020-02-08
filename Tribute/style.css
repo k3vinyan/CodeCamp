@@ -150,6 +150,7 @@ footer a {
     right: 0;
     animation: moveBruce 1.5s ease-in 1 forwards;
     z-index: -100px;
+    overflow: hidden;
 }
 
 @keyframes animateQuote {
