@@ -1,0 +1,204 @@
+$primary-color: #0072BB;
+$secondary-color: #FFFFFF;
+
+$default-padding: 10px;
+$default-marigin: 20px auto 20px auto;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// ---------------------------------------- Cover ---------------------------------------- 
+.cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient($primary-color, $secondary-color);
+    color: #FFFFFF;
+    font-family: "Tahoma", Geneva, sans-serif;
+
+    .logo {
+        width: 100px;
+        height: auto;
+        margin: $default-marigin;
+    }
+
+    blockquote {
+         font-size: 30px;
+        margin: $default-marigin;
+    }
+
+    .cover-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+            margin: $default-marigin;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .cover-button-wrapper {
+            display: flex;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                margin: 10px;
+                padding: 10px 20px 10px 20px;
+                border-radius: 15px;
+                border: 1px solid $primary-color;
+            }
+
+            a:first-child {
+                background: rgba(0, 0, 0, 0%);
+                color: $primary-color;
+            }
+
+            a:nth-child(2) {
+                background: $primary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+
+}
+
+// ---------------------------------------- Nav ---------------------------------------- 
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: $default-marigin;
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        list-style-type: none;
+
+
+        li {
+            text-decoration: none;
+        }
+    }
+}
+
+//// ----------------------------------------  main ---------------------------------------- 
+
+main {
+    display: flex;
+    position: relative;
+
+
+    .content {
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            h1 {
+                font-size: 30px;
+                padding: $default-padding;
+                text-decoration: underline;
+            }
+
+            p {
+                text-align: justify;
+                padding: 10px;
+            }
+
+        }
+
+        section {
+            
+            h2{
+                font-size: 20px;
+                padding: $default-padding;
+            }
+
+            p {
+                text-align: justify;
+                padding: 10px 15px 10px 15px;
+            }
+        }
+    }
+
+
+    //----- aside bar ------
+
+    .aside-bar-button {
+        position: fixed;
+        font-size: 35   px;
+        color: $primary-color;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .asidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        box-shadow: 5px 10px 15px;
+        height: 100vh;
+        padding: $default-padding;
+        background: white;
+
+        ul {
+            list-style: none;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+
+                a::before {
+                    content: " - "
+                }
+
+                a:visited {
+                    color: rgb(71, 21, 151);
+                }
+            }
+
+            h1 {
+                margin: $default-marigin;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: row;
+
+
+        .aside-bar-button {
+            display: none;
+        }
+
+        .asidebar {
+            display: flex;
+            position: static;
+            top: 0;
+            box-shadow: none;
+            height: 100vh;
+            padding: $default-padding;
+            background: white;
+            
+        }
+
+
+    }
+}

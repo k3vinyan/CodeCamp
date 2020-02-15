@@ -60,7 +60,7 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    height: 100%;
+    //height: 100%;
 
     .top-section {
         display: flex;
@@ -74,7 +74,7 @@ nav {
         background-size: cover;
 
         width: 100%;
-        height: 100%;
+        height: 100vh;
 
        .main-heading {
             display: flex;
@@ -139,19 +139,26 @@ nav {
                button:nth-child(2) {
                    background: rgb(0, 163, 114);
                }
-           }
-
-           
+           } 
        }
+
+       .mid-section {
+           display: flex;
+            background: lightsalmon;
+            height: 100vh;
+            
+            .community-section {
+                background: blue;
+            }
+        }
+
+        .bottom-section {
+            background: lightskyblue;
+            height: 100vh;
+        }
     }
 
-    .mid-section {
-        background: lightsalmon;
-    }
-
-    .bottom-section {
-        background: lightskyblue;
-    }
+    
 
     footer {
 

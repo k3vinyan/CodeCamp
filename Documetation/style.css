@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(#0072BB, #FFFFFF);
+  color: #FFFFFF;
+  font-family: "Tahoma", Geneva, sans-serif;
+}
+.cover .logo {
+  width: 100px;
+  height: auto;
+  margin: 20px auto 20px auto;
+}
+.cover blockquote {
+  font-size: 30px;
+  margin: 20px auto 20px auto;
+}
+.cover .cover-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.cover .cover-main ul {
+  margin: 20px auto 20px auto;
+}
+.cover .cover-main li {
+  list-style: none;
+}
+.cover .cover-main .cover-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.cover .cover-main .cover-button-wrapper a {
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  border: 1px solid #0072BB;
+}
+.cover .cover-main .cover-button-wrapper a:first-child {
+  background: rgba(0, 0, 0, 0);
+  color: #0072BB;
+}
+.cover .cover-main .cover-button-wrapper a:nth-child(2) {
+  background: #0072BB;
+  color: #FFFFFF;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px auto 20px auto;
+}
+nav .nav-list {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+}
+nav .nav-list li {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  position: relative;
+}
+main .content header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+main .content header h1 {
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: underline;
+}
+main .content header p {
+  text-align: justify;
+  padding: 10px;
+}
+main .content section h2 {
+  font-size: 20px;
+  padding: 10px;
+}
+main .content section p {
+  text-align: justify;
+  padding: 10px 15px 10px 15px;
+}
+main .aside-bar-button {
+  position: fixed;
+  font-size: 35 px;
+  color: #0072BB;
+  bottom: 0;
+  z-index: 1000;
+}
+main .asidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  box-shadow: 5px 10px 15px;
+  height: 100vh;
+  padding: 10px;
+  background: white;
+}
+main .asidebar ul {
+  list-style: none;
+}
+main .asidebar ul li a {
+  text-decoration: none;
+  color: #0072BB;
+}
+main .asidebar ul li a::before {
+  content: " - ";
+}
+main .asidebar ul li a:visited {
+  color: #471597;
+}
+main .asidebar ul h1 {
+  margin: 20px auto 20px auto;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  main .aside-bar-button {
+    display: none;
+  }
+  main .asidebar {
+    display: flex;
+    position: static;
+    top: 0;
+    box-shadow: none;
+    height: 100vh;
+    padding: 10px;
+    background: white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
